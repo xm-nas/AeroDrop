@@ -374,11 +374,12 @@
 				<textarea id="textInput" placeholder=t("inputPlaceholder") data-i18n-placeholder="inputPlaceholder" disabled></textarea>
 				<button id="sendTextBtn" class="primary" disabled data-i18n="send"> 发送 </button>
 			</div>
-			<footer class="footbar"> © 2026 「 ximi 」All Rights Reserved <span class="lang-switch">
+<footer class="footbar"> © 2026 <a href="https://github.com/xm-nas/AeroDrop" class="title-link">「 ximi 」</a> All Rights Reserved <span class="lang-switch">
 					<button id="zhBtn"> 中文 </button>
 					<button id="enBtn"> English </button>
 				</span>
 			</footer>
+
 		</section>
 	</main>
 </div>
