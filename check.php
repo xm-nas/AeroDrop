@@ -7,7 +7,7 @@ header('Content-Type: text/html; charset=utf-8');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SheepDrop 环境与连通性检测</title>
+    <title>AeroDrop 环境与连通性检测</title>
     <style>
 /* AeroDrop 风格诊断页面 */ .diagnostic-page{ width:min(760px,92%); margin:40px auto; } .diagnostic-page .glass{ background:rgba(255,255,255,.55); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-radius:24px; border:1px solid rgba(255,255,255,.6); box-shadow: 0 10px
 30pxrgba(0,0,0,.08); } .diagnostic-page .section{ margin-top:16px; background:rgba(255,255,255,.35); border-radius:18px; padding:18px; } .diagnostic-page h2{ font-size:16px; margin:0 0 12px; font-weight:600; } .diagnostic-page pre{ margin:0; padding:16px;
@@ -22,7 +22,7 @@ background:rgba(245,245,247,.75);border-radius:14px; border:1px solid rgba(0,0,0
             <h2> 第 1 步：PHP 后端环境检测</h2>
             <pre class="log-info">
 <?php
-echo "=== SheepDrop 运行环境检测 ===\n\n";
+echo "=== AeroDrop 运行环境检测 ===\n\n";
 echo "PHP Version: " . PHP_VERSION . "\n\n";
 
 $required_extensions = ['sockets', 'json', 'openssl', 'pcntl'];
@@ -69,7 +69,7 @@ echo "\n注：核心 WebSocket 功能主要依赖 sockets 和 json 扩展。";
         }
 
         (async function runDiagnostics() {
-            logToPage("=== 🔍 开始 SheepDrop 连通性检测 ===");
+            logToPage("=== 🔍 开始 AeroDrop 连通性检测 ===");
 
             // 1. 检测 ICE 接口
             logToPage("⏳ [1/2] 正在检测 ICE 接口 (/api/ice)...");
