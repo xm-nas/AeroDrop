@@ -19,6 +19,9 @@ AeroDrop 是一款基于 **WebRTC P2P 技术** 的轻量级文件传输工具。
 - 📱 支持房间号、链接、二维码快速连接
 - 🌍 中文 / English 双语言支持
 
+## 🚀 在线体验
+
+https://i.ximi.me/
 
 ## 🛠 技术
 
@@ -26,11 +29,13 @@ AeroDrop 是一款基于 **WebRTC P2P 技术** 的轻量级文件传输工具。
 - WebRTC DataChannel
 - WebSocket 信令服务
 
+## 📦 部署要求
 
-## 🚀 在线体验
-
-https://i.ximi.me/
-
+需要：
+- WebSocket 信令服务
+- 支持 HTTPS 环境（推荐）
+- php扩展:sockets,json,openssl,pcntl 
+- 上传所有文件至战斗目录,访问check.php 可检查是否满足部署要求
 
 ## 📌 适用场景
 
