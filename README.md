@@ -73,3 +73,4 @@ https://i.ximi.me/
 - 1.作者:希米
 - 2.原文：https://www.ximi.me/post-6045.html
 - 3.最后更新:2026-07-08
+- 前台框架样式参考于:[洋小傻](https://filetransfer.caiyy.com)
