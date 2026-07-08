@@ -36,6 +36,29 @@ https://i.ximi.me/
 - 支持 HTTPS 环境（推荐）
 - php扩展:sockets,json,openssl,pcntl 
 - 上传所有文件至战斗目录,访问check.php 可检查是否满足部署要求
+### Nginx 配置
+
+- 配置仅供参考,其中·http://172.18.0.2:8282`请替换为你自己服务器本地ip与端口
+```nginx
+# 1. 处理 ICE 路由 (解决 JSON 解析报错)
+    location /api/ice {
+        try_files $uri /api.php?$query_string;
+    }
+
+    # 2. 处理 WebSocket 代理 (解决连不上后端的问题)
+    location /ws {
+        proxy_pass http://172.18.0.2:8282;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 86400;
+        proxy_send_timeout 86400;
+    }
+```
 
 ## 📌 适用场景
 
